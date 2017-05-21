@@ -2,6 +2,8 @@
 
 .SUFFIXES:
 
+.PHONY: all edit
+
 I4_SLIC3R_FLAGS := --nozzle-diameter=1.75 --gcode-flavor=reprap  --temperature=220
 
 SLIC3R := "/Applications/Slic3r.app/Contents/MacOS/slic3r"
@@ -19,4 +21,8 @@ OPENSCAD_FLAGS :=
 PROJECT := ToiletSeat
 
 all: $(PROJECT).gcode
+
+edit:
+	$(OPENSCAD) $(PROJECT).scad &
+	$(VISUAL) $(PROJECT).scad &
 
