@@ -1,15 +1,17 @@
 //  A foot for the bottom of toilet seat
 
+// Change these
 height=5;
 topLength=14;
 topWidth=8;
 bottomLength=12;
 bottomWidth=4;
+$fn = 40;
 
-$fn = 30;
+// Leave these alone
 topRadius=topWidth/2;
 bottomRadius=bottomWidth/2;
-polyLength=topLength-topRadius;
+polyLength=topLength-topRadius; // Not topLength-2*topRadius because 1st cylindar is centered on 0
 
 //https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/The_OpenSCAD_Language#polygon
 
@@ -35,7 +37,5 @@ polyhedron( CubePoints, CubeFaces );
 
 cylinder(r1=bottomRadius, r2=topRadius, h=height, center=false);
 
-translate([0,bottomLength-bottomRadius,0])  cylinder(r1=bottomRadius, r2=topRadius, h=height, center=false);
-
-
+translate([0,polyLength,0])  cylinder(r1=bottomRadius, r2=topRadius, h=height, center=false);
 
