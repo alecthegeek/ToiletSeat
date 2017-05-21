@@ -1,11 +1,11 @@
 //  A foot for the bottom of toilet seat
 
 // Change these
-height=5;
-topLength=14;
-topWidth=8;
-bottomLength=12;
-bottomWidth=4;
+height=13;
+topLength=52;
+topWidth=19;
+bottomLength=42;
+bottomWidth=15;
 $fn = 40;
 
 // Leave these alone
