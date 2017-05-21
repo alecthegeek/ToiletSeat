@@ -2,10 +2,10 @@
 
 // Change these
 height=13;
-topLength=52;
-topWidth=19;
-bottomLength=42;
-bottomWidth=15;
+topLength=42;
+bottomLength=52;
+topWidth=15;
+bottomWidth=19;
 $fn = 40;
 
 // Leave these alone
