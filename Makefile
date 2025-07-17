@@ -2,10 +2,13 @@
 
 .SUFFIXES:
 
-.PHONY: all edit
+.PHONY: all edit clean
 
 SLIC3R := "/Applications/Slic3r.app/Contents/MacOS/slic3r"
 OPENSCAD := "/Applications/OpenSCAD.app/Contents/MacOS/OpenSCAD"
+
+SLIC3R := "slic3r"
+OPENSCAD := "openscad"
 
 PROJECT := ToiletSeat
 
@@ -33,4 +36,7 @@ image: $(PROJECT).png
 edit:
 	$(OPENSCAD) $(PROJECT).scad &
 	$(VISUAL) $(PROJECT).scad &
+
+clean:
+	-rm $(PROJECT).stl $(PROJECT).gcode $(PROJECT).png
 
